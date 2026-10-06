@@ -1,0 +1,491 @@
+/* Defalt / Small */
+body {
+	margin: 0;
+	background-color: #11151b;
+	color: #F2F0EF;
+	font-family: Geist, sans-serif;
+}
+
+.header {
+	padding: 1rem 1rem 1.5rem;
+}
+
+.header h1 {
+	text-align: center;
+	margin: 0;
+	font-size: 3rem;
+	line-height: 0.9;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -0.25rem;
+}
+
+.wrapper {
+	padding: 0 0.5rem;
+	margin-bottom: 4rem;
+}
+
+.collection {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0;
+}
+
+.animal {
+	display: block;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: -0.15rem;
+}
+
+.animal img {
+	display: block;
+	width: 100%;
+	height: 550px;
+	object-fit: cover;
+	border-radius: 0.3rem 0.3rem 0 0;
+	transition:
+		transform 0.5s ease,
+		filter 0.5s ease,
+		opacity 0.5s ease,
+		clip-path 0.5s ease;
+}
+
+.animal h2 {
+	margin-bottom: 0.75rem;
+	padding: 0.5rem 0;
+	background-color: #11151b;
+	color: white;
+	font-size: 2.25rem;
+	line-height: 1;
+	font-weight: 600;
+}
+
+.footer {
+	text-align: left;
+	margin: 1rem 1rem 2rem 1rem;
+	font-size: 1rem;
+	line-height: 0.9;
+	font-weight: 400;
+}
+
+
+/* Hover Effects */
+/* Slightly approaches the viewer */
+.centipede:hover img {
+	transform: scale(1.2) translate(20px, -15px);
+}
+
+
+/* Moves toward you and darkens */
+.bat img {
+	transition: transform 0.3s ease;
+}
+
+.bat:hover img {
+	transform: scale(1.15) translateY(-35px) rotate(-10deg);
+}
+
+
+/* Slides toward the viewer */
+.scorpion:hover img {
+	transform: scaleX(1.3) scaleY(1.05);
+}
+
+
+/* Fast, aggressive enlargement */
+.mamba img {
+	transition: transform 0.15s ease;
+}
+
+.mamba:hover img {
+	transform: translateX(30px) scale(1.2);
+}
+
+
+/* Moves forward and slightly sideways */
+.dragon img {
+	transition: transform 0.2s ease;
+}
+
+.dragon:hover img {
+	transform: translateX(70px) rotate(3deg);
+}
+
+
+/* Sudden enlargement */
+.stonefish img {
+	transition:
+		transform 0.15s ease,
+		filter 0.15s ease;
+}
+
+.stonefish:hover img {
+	transform: scale(1.35);
+	filter: contrast(1.5);
+}
+
+
+/* Retreats from you */
+.aye:hover img {
+	opacity: 0;
+}
+
+
+/* Gently moves away */
+.shark img {
+	transition: transform 1s ease;
+}
+
+.shark:hover img {
+	transform: translateX(100%);
+}
+
+
+/* Shrinks significantly */
+.devil:hover img {
+	transform: scaleY(0.65);
+	opacity: 0.5;
+	filter: blur(3px);
+}
+
+
+/* Slightly backs away and becomes softer */
+.shoebill img {
+	transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.shoebill:hover img {
+	transform: scale(0.5) translate(-40%, 20%);
+	opacity: 0;
+}
+
+
+/* Retreats downward */
+.gharial img {
+	transition: height 0.6s ease;
+}
+
+.gharial:hover img {
+	height: 60%;
+}
+
+
+/* Slowly retreats and becomes less imposing */
+.birdeater img {
+	transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.birdeater:hover img {
+	transform: translateY(100%);
+}
+
+
+/* Medium */
+@media (min-width: 800px) {
+
+	body {
+		background-color: #f1f0dc;
+		color: #11151b;
+		font-family: Georgia, serif;
+		text-transform: none;
+	}
+
+	.header {
+		padding: 2rem 1rem 3rem;
+	}
+
+	.header h1 {
+		text-align: center;
+		margin: 0;
+		font-size: 2rem;
+		line-height: 1;
+		font-weight: 400;
+		letter-spacing: 0rem;
+		font-family: Libre Caslon Text;
+		text-transform: none;
+	}
+
+	.header span {
+		color: rgb(187, 51, 51);
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	.wrapper {
+		padding: 0 3rem;
+		margin-bottom: 3rem;
+	}
+
+	.collection {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem 3rem;
+	}
+
+	.animal {
+		display: block;
+		color: #11151b;
+		text-decoration: none;
+		text-align: center;
+		letter-spacing: 0rem;
+		text-transform: none;
+	}
+
+	.animal img {
+		display: block;
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+	}
+
+	.animal h2 {
+		margin: 0;
+		padding: 0.75rem 0;
+		font-size: 1.25rem;
+		line-height: 1;
+		font-weight: 400;
+		background-color: #9AAA9E;
+		color: #11151b;
+	}
+
+	/* Full-width animals */
+
+	.centipede,
+	.komodo-dragon,
+	.stonefish,
+	.thorny-devil,
+	.gharial,
+	.goliath-birdeater {
+		grid-column: span 2;
+	}
+
+	/* Half-width animals */
+
+	.vampire-bat,
+	.red-scorpion,
+	.black-mamba,
+	.aye-aye,
+	.basking-shark,
+	.shoebill {
+		grid-column: span 1;
+	}
+
+	.footer {
+		text-align: left;
+		margin-left: 3rem;
+		font-size: 1rem;
+		line-height: 0.9;
+		font-weight: 400;
+	}
+
+		.bat {
+			grid-column: 1;
+			grid-row: 1;
+		}
+
+		.devil {
+			grid-column: 2;
+			grid-row: 1;
+		}
+
+		.centipede {
+			grid-column: span 2;
+			grid-row: 2;
+		}
+
+		.gharial {
+			grid-column: 1;
+			grid-row: 3;
+		}
+
+		.scorpion {
+			grid-column: 2;
+			grid-row: 3;
+		}
+
+		.shoebill {
+			grid-column: 2;
+			grid-row: 5;
+		}
+
+		.dragon {
+			grid-column: 1;
+			grid-row: 5;
+		}
+
+		.aye {
+			grid-column: span 2;
+			grid-row: 4;
+		}
+
+		.mamba {
+			grid-column: span 2;
+			grid-row: 6;
+		}
+
+		.stonefish {
+			grid-column: 1;
+			grid-row: 7;
+		}
+
+		.shark {
+			grid-column: 2;
+			grid-row: 7;
+		}
+
+		.birdeater {
+			grid-column: span 2;
+			grid-row: 8;
+		}
+
+.bat h2, .centipede h2, .scorpion h2, .dragon h2, .mamba h2, .stonefish h2 {
+		background-color: #AE8787;
+	}
+
+}
+
+/* Large */
+@media (min-width: 1280px) {
+
+	body {
+		background-color: #869091;
+		color: #F2F0EF;
+		font-family: Geist, sans-serif;
+	}
+
+	.header {
+		padding: 3rem 3rem 3.5rem;
+	}
+
+	.header h1 {
+		text-align: center;
+		margin: 0;
+		font-size: 3rem;
+		line-height: 0.9;
+		font-weight: 500;
+		letter-spacing: 0rem;
+		color: #D4D4D4;
+		font-family: IBM Plex Mono;
+		text-shadow: 4px 4px 4px #000;
+	}
+
+	.header span {
+		color: #D4D4D4;
+		font-weight: 500;
+	}
+
+	.wrapper {
+		padding: 0 3rem;
+		margin-bottom: 5rem;
+	}
+
+	.collection {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 13.5rem;
+		gap: 1.5rem;
+	}
+
+	.animal {
+	display: block;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	text-align: left;
+	letter-spacing: 0;
+	}
+
+	.animal img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.4rem;
+	}
+
+	.animal h2 {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	color: white;
+	box-shadow: 10px 10px 20px black;
+	font-size: 1.25rem;
+	line-height: 1;
+	font-weight: 400;
+	font-family: IBM Plex Mono;
+	}
+
+	.centipede {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.bat {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.scorpion {
+		grid-column: 3 / span 2;
+		grid-row: 1;
+	}
+
+	.mamba {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+
+	.dragon {
+		grid-column: 3;
+		grid-row: 2;
+	}
+
+	.stonefish {
+		grid-column: 4;
+		grid-row: 2 / span 2;
+	}
+
+	.aye {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	.shark {
+		grid-column: 2 / span 2;
+		grid-row: 3;
+	}
+
+	.devil {
+		grid-column: 1;
+		grid-row: 4;
+	}
+
+	.shoebill {
+		grid-column: 2;
+		grid-row: 4;
+	}
+
+	.gharial {
+		grid-column: 3;
+		grid-row: 4;
+	}
+
+	.birdeater {
+		grid-column: 4;
+		grid-row: 4;
+	}
+
+
+	.footer p {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1;
+		letter-spacing: 0.01rem;
+	}
+}
